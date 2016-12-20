@@ -11,7 +11,7 @@
     <a-scene>
       <a-assets>
         <!-- Images. -->
-        <img id="room360" src="assets/img/room96.jpg">
+        <img id="room360" src="assets/img/room96_wall1.jpg">
         <img id="img2006BC9359" src="assets/img/2006BC9359.jpg">
         <img id="img2011EV4140" src="assets/img/2011EV4140.jpg">
         <img id="img2011EV4190" src="assets/img/2011EV4190.jpg">
@@ -20,7 +20,7 @@
       </a-assets>
       <!-- Image link template to be reused. -->
         <script id="link" type="text/nunjucks">
-          <a-plane class="link" height="1" width="1"
+          <a-plane class="link" height="10" width="10"
             material="shader: flat; src: {{ thumb }}">
           </a-plane>
         </script>
@@ -30,15 +30,15 @@
 <!--
       <a-sky id="image-360" radius="10" src="#room360"></a-sky>
 -->
-      <a-plane src="#room360" height="100" width="100" position="0 0 -30" rotation="0 0 0"></a-plane>
-      <a-plane src="#room360" height="100" width="100" position="30 0 0" rotation="0 -90 0"></a-plane>
-      <a-plane src="#room360" height="100" width="100" position="-30 0 0" rotation="0 90 0"></a-plane>
+      <a-plane src="#room360" height="100" width="100" position="0 0 -40" rotation="0 0 0"></a-plane>
+      <a-plane src="#room360" height="100" width="100" position="40 0 0" rotation="0 -90 0"></a-plane>
+      <a-plane src="#room360" height="100" width="100" position="-40 0 0" rotation="0 90 0"></a-plane>
 
       <!-- Image links. -->
-      <a-entity id="wall1" position="0 2.4 -8">
-        <a-entity template="src: #link" data-src="#img2006BC9359" data-thumb="#img2006BC9359" position="-3.8 0 0"></a-entity>
-        <a-entity template="src: #link" data-src="#img2011EV4140" data-thumb="#img2011EV4140" position="-.5 0 0"></a-entity>
-        <a-entity template="src: #link" data-src="#img2011EV4190" data-thumb="#img2011EV4190" position="3.5 0 0"></a-entity>
+      <a-entity id="wall1" position="0 2.4 -40">
+        <a-entity template="src: #link" data-src="#img2006BC9359" data-thumb="#img2006BC9359" position="-20 0 0"></a-entity>
+        <a-entity template="src: #link" data-src="#img2011EV4140" data-thumb="#img2011EV4140" position="0 0 0"></a-entity>
+        <a-entity template="src: #link" data-src="#img2011EV4190" data-thumb="#img2011EV4190" position="15 0 0"></a-entity>
       </a-entity>
       
       <!-- Camera + Cursor. 
